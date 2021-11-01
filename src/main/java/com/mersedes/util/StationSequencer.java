@@ -45,6 +45,7 @@ public class StationSequencer {
 	public  ArrayList<ChargingStation> generateSequence() {
 		boolean[] B = new boolean[stations.size()];
 		for(int i = 0 ; i < stations.size() ; i++) {
+                        if(null!=route)break;
 			subset(i, 0, 0, B);
 		}
 		return route;
