@@ -3,7 +3,9 @@ BUILT on java version 1.8
 how to build
 1. Download the source code.
 2. Navigate to the downloaded folder "travel-computer"
-3. Open terminal in the folder path and run the command below to create a jar file (Use java version 1.8 to build jar)
+3. Run this step only to rebuild the jar.
+   (Note : Built jar is already included in the target folder , so this step is optional.)
+   Open terminal in the folder path and run the command below to create a jar file (Use java version 1.8 to build jar)
    "mvn clean install"
 4. Run the below command to build docker image
    "docker build -t travel-computer ."
