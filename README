@@ -1,0 +1,20 @@
+how to build
+1. Download the source code.
+2. Navigate to the downloaded folder "travel-computer"
+3. Open terminal in the folder path and run the below command to build docker image
+   "docker build -t travel-computer ."
+
+
+
+how to deploy
+1. Run the below command to start the docker container with the image built
+   "docker run -p8080:8080 travel-computer"
+2. The service shoud be ready to use
+
+
+how to use the services
+1. Make a POST call to using below details
+
+	Method=POST
+	URI=http://localhost:8080/compute
+	SAMPLE BODY={ "vin": "W1K2062161F0046", "source": "Home", "destination": "Movie Theatre" }
