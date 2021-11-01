@@ -17,4 +17,28 @@ how to use the services
 
 	Method=POST
 	URI=http://localhost:8080/compute
-	SAMPLE BODY={ "vin": "W1K2062161F0046", "source": "Home", "destination": "Movie Theatre" }
+	SAMPLE REQUEST BODY={ "vin": "W1K2062161F0046", "source": "Home", "destination": "Movie Theatre" }
+
+
+	SAMPLE RESPONSE BODY=
+	{
+    "transactionId": "163578810495346866",
+    "vin": "W1K2062161F0046",
+    "source": "Home",
+    "destination": "Movie Theatre",
+    "distance": 50,
+    "currentChargeLevel": 17,
+    "isChargingRequired": true,
+    "chargingStations": [
+        {
+            "name": "S1",
+            "distance": 10,
+            "limit": 20
+        },
+        {
+            "name": "S2",
+            "distance": 25,
+            "limit": 15
+        }
+    	]
+	}
