@@ -25,8 +25,10 @@ public class StationSequencer {
 				for (int i = 0; i < stations.size(); i++) {
 					if (used[i] == true) {
 						cs.add(stations.get(i));
+						//System.out.print(stations.get(i).getName()+"-");
 					}
 				}
+				//System.out.println();
 				if(validateRoute(cs)) {
 					route=cs;
 				}
@@ -40,10 +42,14 @@ public class StationSequencer {
 			used[start] = false;
 			subset(k, start + 1, currLen, used);
 		}
+		return;
 	}
 
 	public  ArrayList<ChargingStation> generateSequence() {
 		boolean[] B = new boolean[stations.size()];
+		if(currentCharge-distance>=0) {
+			return new ArrayList<ChargingStation>(0);
+		}
 		for(int i = 1 ; i <= stations.size() ; i++) {
             if(null!=route)break;
 			subset(i, 0, 0, B);

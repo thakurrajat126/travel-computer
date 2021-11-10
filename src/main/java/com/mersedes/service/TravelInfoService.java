@@ -1,7 +1,7 @@
 package com.mersedes.service;
 
-import org.springframework.web.client.RestTemplate;
 
+import org.springframework.web.client.RestTemplate;
 import com.mersedes.common.ChargeInfoRequest;
 import com.mersedes.common.ChargeInfoResponse;
 import com.mersedes.common.DistanceInfoRequest;
